@@ -1,0 +1,10 @@
+{
+  "name": "lmvc-afresh",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "latest",
+    "neat": "latest",
+    "bourbon": "latest",
+    "normalize.scss": "latest"
+  }
+}

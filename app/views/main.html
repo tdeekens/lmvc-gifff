@@ -1,0 +1,47 @@
+<?php
+    use ui\UI;
+    use Scandio\lmvc\modules\security\handlers\database\models;
+    use Scandio\lmvc\modules\security\Security;
+    use Scandio\lmvc\modules\htmltag\Html;
+?>
+
+<!doctype html>
+<html>
+<head>
+    <title>LMVC Afresh</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    <?= UI::css($app->assets(['bootstrap.css', 'bootstrap-responsive.css'], [])) ?>
+
+    <?= UI::css($app->assets(['styles.less'])) ?>
+
+    <?= UI::js($app->assets(['jquery-1.9.1.min.js', 'bootstrap.min.js'])) ?>
+    -->
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+
+    </header>
+
+    <div class="row-fluid">
+        <?php include($app->view) ?>
+    </div>
+
+    <div class="example">
+        <?=
+            Html::ul(
+                [
+                    'class' => 'wrap-it'
+                ], Html::li(null, ['item-1', 'item-2', 'item-3'])
+            );
+        ?>
+    </div>
+
+    <footer>
+
+    </footer>
+</div>
+</body>
+</html>
