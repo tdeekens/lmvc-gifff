@@ -4,7 +4,7 @@ session_start();
 setlocale(LC_ALL, "de_DE");
 date_default_timezone_set('Europe/Berlin');
 
-require_once('./vendor/autoload.php');
+require_once('./composer/autoload.php');
 
 use Scandio\lmvc\LVC;
 
