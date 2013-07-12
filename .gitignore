@@ -2,4 +2,4 @@
 /composer/
 /bower/
 /composer.lock
-_cache/*
+_cache/
