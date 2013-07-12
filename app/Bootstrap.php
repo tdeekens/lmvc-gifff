@@ -21,19 +21,19 @@ class Bootstrap extends \Scandio\lmvc\Bootstrap
             'assetRootDirectory' => static::getPath(),
             'assetDirectories' => [
                 'js'    => [
-                    'fallbacks'  => ['../vendor']
+                    'fallbacks'  => ['../bower', '../composer']
                 ],
                 'coffee'    => [
-                    'fallbacks'  => ['../vendor']
+                    'fallbacks'  => ['../bower', '../composer']
                 ],
                 'css'    => [
-                    'fallbacks'  => ['../vendor']
+                    'fallbacks'  => ['../bower', '../composer']
                 ],
                 'sass'    => [
-                    'fallbacks'  => ['../vendor']
+                    'fallbacks'  => ['../bower', '../composer']
                 ],
                 'less'    => [
-                    'fallbacks'  => ['../vendor']
+                    'fallbacks'  => ['../bower', '../composer']
                 ],
                 'img'    => [
                     'fallbacks'  => []
