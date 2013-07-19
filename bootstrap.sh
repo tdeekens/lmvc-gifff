@@ -1,9 +1,10 @@
 #!/bin/bash
 
-CHMOD = true
-if [[ "$1" = "no-chmod" || "$2" == "no-chmod" ]]
+if [[ "$1" = "no-chmod" ]]
    then
-      CHMOD=false
+      SET_CHMOD=false
+   else
+      SET_CHMOD=true
 fi
 
 echo "# Bootstrapping your project..."
@@ -21,7 +22,7 @@ composer install
 echo "2.2.) Bower from bower.json..."
 bower install
 
-if [ "$CHMOD" == true ]
+if [ "$SET_CHMOD" == true ]
    then
       echo "3.) Setting chmods for caching directories..."
       chmod 0777 app/coffeescript/_cache
