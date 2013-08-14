@@ -16,29 +16,6 @@ class Bootstrap extends \Scandio\lmvc\Bootstrap
 
         ui\UI::registerSnippetDirectory(static::getPath() . '/ui/snippets/');
 
-        assetpipeline\Bootstrap::configure([
-            'useFolders'    => true,
-            'assetRootDirectory' => static::getPath(),
-            'assetDirectories' => [
-                'js'    => [
-                    'fallbacks'  => ['../bower', '../composer']
-                ],
-                'coffee'    => [
-                    'fallbacks'  => ['../bower', '../composer']
-                ],
-                'css'    => [
-                    'fallbacks'  => ['../bower', '../composer']
-                ],
-                'sass'    => [
-                    'fallbacks'  => ['../bower', '../composer']
-                ],
-                'less'    => [
-                    'fallbacks'  => ['../bower', '../composer']
-                ],
-                'img'    => [
-                    'fallbacks'  => []
-                ]
-            ]
-        ]);
+        assetpipeline\Bootstrap::configure(static::getPath());
     }
 }

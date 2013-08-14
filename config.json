@@ -21,5 +21,28 @@
     },
     "registration": {
         "mediator": "\\Scandio\\lmvc\\modules\\registration\\handlers\\DatabaseMediator"
+    },
+    "assetpipeline" : {
+        "useFolders": true,
+        "assetDirectories": {
+            "js": {
+                "fallbacks": ["../bower", "../composer"]
+            } ,
+            "coffee": {
+                "fallbacks": ["../bower", "../composer"]
+            },
+            "css": {
+                "fallbacks": ["../bower", "../composer"]
+            },
+            "sass": {
+                "fallbacks": ["../bower", "../composer"]
+            },
+            "less": {
+                "fallbacks": ["../bower", "../composer"]
+            },
+            "img": {
+                "fallbacks": []
+            }
+        }
     }
 }
