@@ -1,6 +1,7 @@
 <?php
     use ui\UI;
     use Scandio\lmvc\modules\security\handlers\database\models;
+    use Scandio\lmvc\modules\assetpipeline\view\Asset;
     use Scandio\lmvc\modules\security\Security;
     use Scandio\lmvc\modules\htmltag\Html;
 ?>
@@ -11,13 +12,12 @@
     <title>LMVC Afresh</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-    <?= UI::css($app->assets(['bootstrap.css', 'bootstrap-responsive.css'], [])) ?>
 
-    <?= UI::css($app->assets(['styles.less'])) ?>
+    <?= UI::css(Asset::assets(['bootstrap.css'], [])) ?>
 
-    <?= UI::js($app->assets(['jquery-1.9.1.min.js', 'bootstrap.min.js'])) ?>
-    -->
+    <?= UI::css(Asset::assets(['styles.less'])) ?>
+
+    <?= UI::js(Asset::assets(['jquery.js', 'bootstrap.js'])) ?>
 </head>
 <body>
 <div class="container-fluid">

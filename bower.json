@@ -5,6 +5,7 @@
     "jquery": "latest",
     "neat": "latest",
     "bourbon": "latest",
-    "normalize.scss": "latest"
+    "normalize.scss": "latest",
+    "bootstrap": "latest"
   }
 }
