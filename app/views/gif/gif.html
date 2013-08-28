@@ -1,0 +1,7 @@
+<form role="form" action="<?= $app->url('Gif::gif') ?>" method="post">
+   <div class="form-group has-error">
+      <label class="control-label" for="inputError"><?= $errors['url']['check-url'] ?></label>
+
+      <input type="string" name="url" class="form-control" id="" placeholder="Add a gif-url" value="<?= $url ?>">
+   </div>
+</form>

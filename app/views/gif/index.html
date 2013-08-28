@@ -1,0 +1,27 @@
+<?php
+    use ui\UI;
+    use Scandio\lmvc\modules\assetpipeline\view\Asset;
+    use Scandio\lmvc\modules\htmltag\Html;
+?>
+<ul class="pager">
+   <li class="previous">
+      <a href="<?= $app->url('Application::index', [0, 50]) ?>">
+         Zurück
+      </a>
+   </li>
+</ul>
+
+<div class="row text-center">
+   <div class="gif-perma col-sm-5 col-md-4 col-md-offset-4">
+      <a data-id="<?= $gif->id ?>" href="<?= $app->url('Application::index') ?>" class="thumbnail gif">
+         <img src="<?= $gif->url ?>" data-src="" alt="" />
+      </a>
+   </div>
+</div>
+
+<ol class="breadcrumb">
+   <li><a href="#"><?= $app->url('Gif', $gif->id) ?></a></li>
+</ol>
+
+<?= UI::js(Asset::assets(['jquery.giflove.js'], ['path' => 'plugins'])) ?>
+<?= UI::js(Asset::assets(['jquery.application-index.js'], ['path' => 'views'])) ?>

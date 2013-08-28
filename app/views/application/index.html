@@ -1,1 +1,42 @@
-<h1>Hello LMVC-afresh is calling!</h1>
+<?php
+    use ui\UI;
+    use Scandio\lmvc\modules\assetpipeline\view\Asset;
+    use Scandio\lmvc\modules\htmltag\Html;
+?>
+
+<form role="form" action="<?= $app->url('Gif::gif') ?>" method="post">
+   <div class="form-group">
+      <input type="string" name="url" class="form-control" id="" placeholder="Add a gif-url">
+   </div>
+</form>
+
+<div class="row">
+   <?php foreach($gifs as $gif): ?>
+      <div class="col-sm-6 col-md-3">
+         <button data-id="<?= $gif->id ?>" type="button" class="btn btn-lg btn-primary gif-love">
+           <span class="glyphicon glyphicon-heart">
+           </span> <span class="love-count"> <?= $gif->loves ?> </span>
+         </button>
+
+         <a data-id="<?= $gif->id ?>" href="<?= $app->url('Gif', $gif->id) ?>" class="thumbnail gif">
+            <img src="<?= $gif->url ?>" data-src="" alt="" />
+         </a>
+      </div>
+   <?php endforeach; ?>
+</div>
+
+<ul class="pager">
+   <li class="previous <?php echo ( $offsetPrevious !== false) ? '' : 'disabled' ?>">
+      <a href="<?= $app->url('Application::index', [$offsetPrevious, $length]) ?>">
+         Zurück
+      </a>
+   </li>
+   <li class="next <?php echo ( $offsetNext !== false) ? '' : 'disabled' ?>">
+      <a href="<?= $app->url('Application::index', [$offsetNext, $length]) ?>">
+         Weiter
+      </a>
+   </li>
+</ul>
+
+<?= UI::js(Asset::assets(['jquery.giflove.js'], ['path' => 'plugins'])) ?>
+<?= UI::js(Asset::assets(['jquery.application-index.js'], ['path' => 'views'])) ?>
