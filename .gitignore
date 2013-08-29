@@ -1,6 +1,4 @@
 /.idea/
-/composer/
-/bower/
 /composer.lock
 /composer.phar
 _cache/
