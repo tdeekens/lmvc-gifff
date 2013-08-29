@@ -1,5 +1,5 @@
 window.app = {
    config: {
-      appUrl: 'http://localhost/LMVC/lmvc-gif/'
+      appUrl: 'http://localhost/LMVC/lmvc-gifff/'
    }
 }

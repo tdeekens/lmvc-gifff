@@ -13,7 +13,7 @@ class Gif extends Form
 
     protected function checkurl($url)
     {
-        if (!empty($this->request()->$url) || ! preg_match('#(http://[^"]+\.(jpg|gif|png))#is', $this->request()->$url)) {
+        if (empty($this->request()->$url) || preg_match_all('#https://.*\.com/([\w-]+=\w\d{2,3})#iU', $this->request()->$url, $match, PREG_SET_ORDER)) {
             $this->setError($url, array($this->request()->$url));
         }
     }
