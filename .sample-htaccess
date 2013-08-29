@@ -5,4 +5,4 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^(.*)$ /LMVC/lmvc-gif/index.php?app-slug=$1 [L,QSA]
+RewriteRule ^(.*)$ /lmvc-gifff/index.php?app-slug=$1 [L,QSA]
