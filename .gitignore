@@ -2,4 +2,7 @@
 /composer/
 /bower/
 /composer.lock
+/composer.phar
 _cache/
+config.json
+.htaccess
